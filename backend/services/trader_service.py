@@ -1,0 +1,6 @@
+from models.trader_model import Trader
+from typing import List, Protocol
+
+class TraderService(Protocol):
+    def get_all(self) -> List[Trader]: ...
+    def add(self, trader: Trader) -> Trader: ...
