@@ -8,5 +8,3 @@ system_prompt = (
     "\n".join([f"- {line}" for line in instructions]) +
     f"\nBooks: {scope.get('books')}\nCustomers: {scope.get('customers')}"
 )
-
-async def query_llm(model: str, user_prompt: str, scope: dict, ...):
