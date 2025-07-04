@@ -1,0 +1,22 @@
+{
+  "use_case_name": "Trade Activity & Book Analytics",
+  "python_class_used_by": "TradeActivityOrchestrator",
+  "roles_list": ["trader", "risk-analyst"],
+  "instructions_list": [
+    "Only respond with data accessible to the user's role.",
+    "Summarize trends without exposing sensitive trades.",
+    "When comparing books, show relative volume or delta."
+  ],
+  "prompt_examples": [
+    "Who traded the most JPY options today?",
+    "List new trades from Cust104.",
+    "Show trade volume in FX-G10 and FX-EM books.",
+    "Which book has the highest open interest?",
+    "Compare FX-G10 and FX-EM performance over the week.",
+    "Who added or closed positions today?",
+    "Show the average position size today.",
+    "Which customers traded during Tokyo session?",
+    "List books where USD exposure increased since morning.",
+    "Show cancelled trades from the last 12 hours."
+  ]
+}

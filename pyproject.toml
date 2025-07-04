@@ -1,0 +1,7 @@
+[tool.poetry]
+name = "FOREX-Position-Risk-Traders-AI-Agent"
+version = "0.1.0"
+description = "Modular, LLM-powered assistant for forex traders, risk analysts, and compliance teams"
+authors = ["Aruna <you@example.com>"]
+readme = "README.md"
+packages = [{ include = "backend" }]

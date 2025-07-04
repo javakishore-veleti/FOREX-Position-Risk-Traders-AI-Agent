@@ -1,0 +1,22 @@
+{
+  "use_case_name": "Onboarding & Compliance Operations",
+  "python_class_used_by": "ComplianceOpsOrchestrator",
+  "roles_list": ["onboarding", "compliance"],
+  "instructions_list": [
+    "Show status across onboarding milestones (KYC, AML, credit checks).",
+    "Only return customers within authorized books.",
+    "Mark escalated or dropped customers clearly."
+  ],
+  "prompt_examples": [
+    "Who is pending onboarding?",
+    "List customers cleared for spot but not options.",
+    "Who passed AML but failed credit check?",
+    "Show onboarding timeline for Cust302.",
+    "List all high-risk customers approved this week.",
+    "Identify customers with missing documentation.",
+    "Show approval workflow logs for Cust1005.",
+    "Which customers were manually escalated to compliance?",
+    "Show onboarding SLA compliance by region.",
+    "List onboarding dropouts this month."
+  ]
+}

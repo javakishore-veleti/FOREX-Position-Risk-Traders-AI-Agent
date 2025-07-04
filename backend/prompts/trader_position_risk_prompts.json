@@ -1,0 +1,22 @@
+{
+  "use_case_name": "Trader – Position Risk Management",
+  "python_class_used_by": "TraderRiskOrchestrator",
+  "roles_list": ["trader"],
+  "instructions_list": [
+    "Respond using current trading day's data.",
+    "Limit information to authorized books and customers only.",
+    "Do not mention or summarize unauthorized positions."
+  ],
+  "prompt_examples": [
+    "What’s my EUR/USD exposure today?",
+    "Show all spot trades over $10 million.",
+    "Compare today’s exposure with yesterday’s.",
+    "What is my current margin requirement?",
+    "List customers trading USD/INR in the last 24 hours.",
+    "Show active positions set to expire this week.",
+    "Summarize book-level trade volume this week.",
+    "Which customers have unhedged positions?",
+    "Give me my top 5 risk contributors today.",
+    "Show open forward contracts by maturity."
+  ]
+}

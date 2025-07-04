@@ -1,0 +1,22 @@
+{
+  "use_case_name": "Risk Analytics & Threshold Monitoring",
+  "python_class_used_by": "RiskAnalystOrchestrator",
+  "roles_list": ["risk-analyst"],
+  "instructions_list": [
+    "Highlight violations of internal risk policy.",
+    "Use concise summaries of exposure and leverage.",
+    "Group insights by desk, book, or currency when needed."
+  ],
+  "prompt_examples": [
+    "List customers over VAR threshold.",
+    "Compare risk limits with actual exposure.",
+    "Which currencies had the largest position delta?",
+    "Identify risk clusters by customer type.",
+    "Forecast impact if EUR drops by 2%.",
+    "Highlight suspicious trade patterns.",
+    "Who is operating near their credit limit?",
+    "Which books would be affected by a Fed rate change?",
+    "Show risk-weighted exposure by sector.",
+    "Are any VAR models out of tolerance?"
+  ]
+}

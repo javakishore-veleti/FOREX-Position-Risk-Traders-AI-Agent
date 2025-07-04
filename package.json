@@ -1,0 +1,10 @@
+{
+  "name": "forex-position-risk-traders-ai-agent",
+  "version": "1.0.0",
+  "scripts": {
+    "infra:init": "cd cicd/aws-infra/terraform-code && terraform init",
+    "infra:validate": "cd cicd/aws-infra/terraform-code && terraform validate",
+    "infra:all": "cd cicd/aws-infra/terraform-code && terraform apply -auto-approve",
+    "infra:destroy": "cd cicd/aws-infra/terraform-code && terraform destroy -auto-approve"
+  }
+}
