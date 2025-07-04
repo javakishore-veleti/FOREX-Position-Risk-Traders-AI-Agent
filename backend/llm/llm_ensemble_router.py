@@ -13,6 +13,7 @@ provider_map = {
     "bedrock": BedrockProvider(),
 }
 
+
 async def call_provider(name, model_id, user_prompt, system_prompt):
     provider = provider_map[name]
     try:
@@ -20,6 +21,7 @@ async def call_provider(name, model_id, user_prompt, system_prompt):
         return {"provider": f"{name}:{model_id}", "text": response}
     except Exception as e:
         return {"provider": f"{name}:{model_id}", "error": str(e)}
+
 
 async def ensemble_query(message: str, scope: dict, model_map: dict, role_hint="trader") -> list:
     system_prompt = build_system_prompt(scope, role=role_hint)

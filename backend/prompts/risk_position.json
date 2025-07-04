@@ -1,0 +1,20 @@
+{
+  "use_case_name": "summarize_fx_position_risk",
+  "python_class_used_by": "PositionRiskOrchestrator",
+  "roles_list": ["trader", "analyst"],
+  "instructions_list": [
+    "Always focus on FX G10 exposure and customer-specific insights.",
+    "Do not explain what FX means — assume user is a seasoned trader.",
+    "Summarize VaR (Value at Risk) in one sentence if applicable."
+  ],
+  "prompt_examples": [
+    {
+      "user_message": "What's my EUR/USD exposure?",
+      "ideal_response": "Your net EUR/USD exposure is $13.5M, all within FX-G10 books. Current VaR is 1.2%."
+    },
+    {
+      "user_message": "Any risk concentrations today?",
+      "ideal_response": "Yes — concentrated GBP/USD positions in Cust203 (~$6.1M)."
+    }
+  ]
+}

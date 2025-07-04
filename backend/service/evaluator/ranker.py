@@ -11,15 +11,32 @@ def rank_responses(responses: list, message: str, scope: dict) -> dict:
         if "var" in content: score += 0.1
         return score
 
-    scored = [{"provider": r["provider"], "text": r.get("text", ""), "score": score(r)} for r in responses if "text" in r]
+    scored = [
+        {
+            "provider": r["provider"],
+            "text": r.get("text", ""),
+            "score": score(r)
+        }
+        for r in responses if "text" in r
+    ]
     ranked = sorted(scored, key=lambda x: x["score"], reverse=True)
 
     explanation = []
     for r in responses:
         if "error" in r:
             explanation.append(f"{r['provider']} failed: {r['error']}")
-        elif r["provider"] != ranked[0]["provider"]:
+        elif not any(r["provider"] == s["provider"] for s in ranked):
+            explanation.append(f"{r['provider']} returned no usable text.")
+        elif ranked and r["provider"] != ranked[0]["provider"]:
             explanation.append(f"{r['provider']} scored lower due to insufficient context mention.")
+
+    if not ranked:
+        return {
+            "summary": "No valid responses returned by LLM providers.",
+            "best_response": None,
+            "rankings": [],
+            "explanation": explanation
+        }
 
     return {
         "summary": f"{ranked[0]['provider']} selected based on book/customer context and prompt relevance.",

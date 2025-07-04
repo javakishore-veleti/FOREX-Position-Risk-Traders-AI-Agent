@@ -15,8 +15,7 @@ class BedrockProvider(LLMProvider):
                 "max_tokens": 1024,
                 "temperature": 0.7,
                 "messages": [
-                    {"role": "system", "content": system_prompt},
-                    {"role": "user", "content": prompt}
+                    {"role": "user", "content": f"{system_prompt.strip()}\n\n{prompt.strip()}"}
                 ]
             }
         else:

@@ -6,9 +6,14 @@ provider_map = {
 
 
 def build_system_prompt(scope: dict, role: str = "trader") -> str:
+    from backend.prompts.loader import load_prompt_for_class
+    prompt_instructions = load_prompt_for_class("PositionRiskOrchestrator", role)
+
     books = ", ".join(scope.get("books", []))
     customers = ", ".join(scope.get("customers", []))
-    return f"Role: {role}\nLimit books to: {books}\nCustomers: {customers}"
+
+    context = f"\n\nContext:\n- Books: {books}\n- Customers: {customers}"
+    return f"{prompt_instructions}{context}"
 
 
 async def query_llm(model: str, message: str, scope: dict, role_hint: str = "trader") -> str:

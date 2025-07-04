@@ -3,10 +3,11 @@
   "python_class_used_by": "TradeActivityOrchestrator",
   "roles_list": ["trader", "risk-analyst"],
   "instructions_list": [
-    "Only respond with data accessible to the user's role.",
-    "Summarize trends without exposing sensitive trades.",
-    "When comparing books, show relative volume or delta."
-  ],
+  "List each currency and associated trade volume clearly.",
+  "Mention any FX-G10 currency traded above $20M.",
+  "If VaR is relevant, estimate it concisely."
+],
+
   "prompt_examples": [
     "Who traded the most JPY options today?",
     "List new trades from Cust104.",
