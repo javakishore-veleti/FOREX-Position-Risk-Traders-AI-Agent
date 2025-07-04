@@ -19,5 +19,14 @@
     "Which customers traded during Tokyo session?",
     "List books where USD exposure increased since morning.",
     "Show cancelled trades from the last 12 hours."
-  ]
+  ],
+  "role_overrides": {
+  "analyst": {
+    "instructions_list": ["Group volume by currency in bullet format. Keep it concise."]
+  },
+  "risk_manager": {
+    "instructions_list": ["Highlight exposure breaches above $5M. Mention book risk."]
+  }
+}
+
 }

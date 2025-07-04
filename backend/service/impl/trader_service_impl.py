@@ -6,6 +6,7 @@ class TraderRiskServiceImpl:
         role = "trader"  # You could pass this dynamically later
         model = ModelRouter.select_model(role=role, prompt=message)
 
+
         return await query_llm(
             model=model,
             user_prompt=message,

@@ -30,3 +30,4 @@ class BedrockProvider(LLMProvider):
 
         result = json.loads(response["body"].read())
         return result["content"][0]["text"]
+
