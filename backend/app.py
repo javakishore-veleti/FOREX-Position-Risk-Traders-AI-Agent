@@ -1,4 +1,7 @@
 from dotenv import load_dotenv
+
+from backend.api.telemtry_api import telemetry_router
+
 load_dotenv()
 
 from fastapi import FastAPI
@@ -16,3 +19,5 @@ app.include_router(ping_router)
 app.include_router(risk_router)
 app.include_router(trade_router)
 app.include_router(compliance_router)
+
+app.include_router(telemetry_router)

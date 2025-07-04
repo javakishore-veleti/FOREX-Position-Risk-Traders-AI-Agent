@@ -12,7 +12,7 @@ terraform.tfstate*
 frontend/node_modules/
 frontend/dist/
 .angular/
-
+frontend-prompt-dashboard/node_modules
 # Misc
 *.log
 .env
