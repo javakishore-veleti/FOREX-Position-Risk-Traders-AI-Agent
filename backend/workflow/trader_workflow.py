@@ -1,5 +1,6 @@
 from backend.workflow.subtasks.trader_subtask import TraderSubTask
 
+
 class TraderRiskWorkflow:
     def __init__(self):
         self.task = TraderSubTask()

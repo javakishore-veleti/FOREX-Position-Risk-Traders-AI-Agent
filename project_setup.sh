@@ -102,4 +102,11 @@ cat <<EOL > package.json
 }
 EOL
 
+brew install poetry
+
+poetry --version
+
+
 echo "✅ Project scaffold ready with modular LLM backend and Terraform IaC!"
+
+

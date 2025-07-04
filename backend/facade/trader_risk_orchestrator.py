@@ -1,5 +1,6 @@
-from backend.workflow.trader_workflow import TraderRiskWorkflow
 from backend.dto.common import PromptQueryDTO, PromptResponseDTO
+from backend.workflow.trader_workflow import TraderRiskWorkflow
+
 
 class TraderRiskOrchestrator:
     def __init__(self):

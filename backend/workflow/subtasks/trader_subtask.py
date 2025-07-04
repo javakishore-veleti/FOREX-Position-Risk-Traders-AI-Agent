@@ -1,5 +1,6 @@
 from backend.service.impl.trader_service_impl import TraderRiskServiceImpl
 
+
 class TraderSubTask:
     def __init__(self):
         self.service = TraderRiskServiceImpl()
